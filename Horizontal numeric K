@@ -1,0 +1,27 @@
+n = int(input("Enter the number of lines :\t"))
+i = 1
+while i <= n:
+    j = 1
+    while j <= i:
+        print(j, end = "")
+        j = j + 1
+    k = 1
+    while k <= (2 * (n - i) - 1):
+        print(" ", end = "")
+        k = k + 1
+    p = ((2 * n) - i)
+    m = 1
+    if i < n:
+        while m <= i:
+            print(p, end = "")
+            p = p + 1
+            m = m + 1
+    else:
+        p = p + 1
+        while m < i:
+            print(p, end = "")
+            p = p + 1
+            m = m + 1
+    print("\n")
+    i = i + 1
+            
