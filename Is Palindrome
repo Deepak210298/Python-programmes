@@ -1,0 +1,19 @@
+def is_palindrome(input_string):
+    new_string = ""
+    reverse_string = ""
+    for each_letter in input_string[::-1]:
+        if each_letter != " ":
+            reverse_string += each_letter
+        else:
+            pass
+    print(reverse_string.lower())
+    for each_letter in input_string:
+        if each_letter != " ":
+            new_string += each_letter
+        else:
+            pass
+    print(new_string.lower())
+    if new_string.lower() == reverse_string.lower():
+        return True
+    else:
+        return False
