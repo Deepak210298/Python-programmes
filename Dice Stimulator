@@ -1,0 +1,183 @@
+import random
+def dice_stimulator():
+    def dice_1():
+        for i in range(0,7):
+            for j in range(0,7):
+                if i == 0:
+                    if j < 6:
+                        print("-",end="")
+                    if j == 6:
+                        print("-")            
+                elif i > 0:
+                    if j == 0 and i < 6:
+                        print("|",end="")
+                    elif i == 3 and j == 3:
+                        print("*",end="")
+                    elif i == 6:
+                        if j < 6:
+                            print("-",end="")
+                        if j == 6:
+                            print("-")
+                    elif j == 6:
+                        print("|")
+                    else:
+                        print(" ",end="")
+                else:
+                    pass
+            
+    
+    
+    def dice_2():
+        for i in range(0,7):
+            for j in range(0,7):
+                if i == 0:
+                    if j < 6:
+                        print("-",end="")
+                    if j == 6:
+                        print("-")            
+                elif i > 0:
+                    if j == 0 and i < 6:
+                        print("|",end="")
+                    elif i == 3 and (j == 2 or j == 4):
+                        print("*",end="")
+                    elif i == 6:
+                        if j < 6:
+                            print("-",end="")
+                        if j == 6:
+                            print("-")
+                    elif j == 6:
+                        print("|")
+                    else:
+                        print(" ",end="")
+                else:
+                    pass
+                
+    
+    def dice_3():
+        for i in range(0,7):
+            for j in range(0,7):
+                if i == 0:
+                    if j < 6:
+                        print("-",end="")
+                    if j == 6:
+                        print("-")            
+                elif i > 0:
+                    if j == 0 and i < 6:
+                        print("|",end="")
+                    elif i == 3 and (j == 2 or j == 3 or j == 4):
+                        print("*",end="")
+                    elif i == 6:
+                        if j < 6:
+                            print("-",end="")
+                        if j == 6:
+                            print("-")
+                    elif j == 6:
+                        print("|")
+                    else:
+                        print(" ",end="")
+                else:
+                    pass
+                
+    
+    
+    def dice_4():
+        for i in range(0,7):
+            for j in range(0,7):
+                if i == 0:
+                    if j < 6:
+                        print("-",end="")
+                    if j == 6:
+                        print("-")            
+                elif i > 0:
+                    if j == 0 and i < 6:
+                        print("|",end="")
+                    elif (i == 2 or i == 4) and (j == 2 or j == 4):
+                        print("*",end="")
+                    elif i == 6:
+                        if j < 6:
+                            print("-",end="")
+                        if j == 6:
+                            print("-")
+                    elif j == 6:
+                        print("|")
+                    else:
+                        print(" ",end="")
+                else:
+                    pass
+                
+    
+    def dice_5():
+        for i in range(0,7):
+            for j in range(0,7):
+                if i == 0:
+                    if j < 6:
+                        print("-",end="")
+                    if j == 6:
+                        print("-")            
+                elif i > 0:
+                    if j == 0 and i < 6:
+                        print("|",end="")
+                    elif (i == 2 or i == 4) and (j == 2 or j == 4):
+                        print("*",end="")
+                    elif i == 3 and j == 3:
+                            print("*",end="")
+                    elif i == 6:
+                        if j < 6:
+                            print("-",end="")
+                        if j == 6:
+                            print("-")
+                    elif j == 6:
+                        print("|")
+                    else:
+                        print(" ",end="")
+                else:
+                    pass
+    
+    
+    def dice_6():
+        for i in range(0,7):
+            for j in range(0,7):
+                if i == 0:
+                    if j < 6:
+                        print("-",end="")
+                    if j == 6:
+                        print("-")            
+                elif i > 0:
+                    if j == 0 and i < 6:
+                        print("|",end="")
+                    elif (i == 2 or i == 3 or i == 4) and (j == 2 or j == 4):
+                        print("*",end="")
+                    elif i == 6:
+                        if j < 6:
+                            print("-",end="")
+                        if j == 6:
+                            print("-")
+                    elif j == 6:
+                        print("|")
+                    else:
+                        print(" ",end="")
+                else:
+                    pass
+                
+    
+    
+    while(1):
+        answer = input()
+        if answer.lower() == 'y':
+            dice_value = random.randint(1,6)
+            if dice_value == 1:
+                dice_1()
+            elif dice_value == 2:
+                dice_2()
+            elif dice_value == 3:
+                dice_3()
+            elif dice_value == 4:
+                dice_4()
+            elif dice_value == 5:
+                dice_5()
+            else:
+                dice_6()
+        else:
+            break
+        
+dice_stimulator()
