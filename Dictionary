@@ -1,0 +1,16 @@
+def dictionary():
+    file = open("Dictionary.txt", "r")
+    meaning = ""
+    word = input()
+    
+    for line in file:
+        index_of_colon = line.index(":")
+        if word.lower() in line[:index_of_colon]:
+            meaning += line[index_of_colon + 2:]
+        else:
+            print("WORD NOT FOUND")
+            
+    print(meaning)
+
+dictionary()
+
