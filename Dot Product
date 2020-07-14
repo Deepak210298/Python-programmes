@@ -1,0 +1,17 @@
+def dot_product():
+    order = int(input("Write order of matrix : "))
+    A = []
+    B = []
+    for i in range(0, order):
+        for j in range(0, order):
+            A.append(int(input()))
+    
+    for i in range(0, order):
+        for j in range(0, order):
+            B.append(int(input()))
+    
+    #val = 0
+    '''for i in range(0, order):
+        for j in range(0, order):'''
+    print(A,B)
+dot_product()
