@@ -1,50 +1,45 @@
 def dot_product():
-    #order = int(input("Write order of matrix : "))
+    order = int(input("Write order of matrix : "))
     A = []
     B = []
     
-    for i in range(0,2):
+    for i in range(0,order):
         list = []
-        for j in range(0,2):
+        for j in range(0,order):
             list.append(int(input()))
         A.append(list)
         
     
-    for i in range(0,2):
+    for i in range(0,order):
         list = []
-        for j in range(0,2):
+        for j in range(0,order):
             list.append(int(input()))
         B.append(list)
-    
-    val = 0
-    for i in range(0,2):
-        for j in range(0,2):
+        
+    # Transposing matrix B
+    val = []
+    for i in range(0,order):
+        for j in range(0,order):
             if i != j:
                 if j > i:
-                    val += B[i][j]
+                    val.append(B[i][j])
                     B[i][j] = B[j][i]
                 if j < i:
-                    B[i][j] = val
-    
+                    B[i][j] = val[0]
+                    val.remove(val[0])
+                    
+        
     result = []
-    val = 0
-    for i in range(0, 2):
+    tmp = 0    
+    for i in range(0, order):
         list = []
-        val = 0
-        for j in range(0, 2):
-            if i == 1:
-                val += A[i][j] * B[0][j]
-            else:
-                val += A[i][j] * B[i][j]
-            
-        list.append(val)
-        val = 0
-        for k in range(0,2):
-            val += A[i][k] * B[j][k]
-            
-        list.append(val)
+        tmp = 0
+        for j in range(0, order):
+            tmp = 0
+            for k in range(0, order):
+                tmp += A[i][k] * B[j][k]
+            list.append(tmp)
         result.append(list)
             
-            
-    print(result)
+    
 dot_product()
