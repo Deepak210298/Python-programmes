@@ -1,0 +1,27 @@
+def display_dashboard(students, marks):
+    records = {}
+    if len(students) == len(marks):
+        for (x,y) in zip(students, marks):
+            name = x
+            scores = y
+            records[name] = scores
+    else:
+        print("Something wrong in students or marks!!!!!!!!!!")
+        
+    print(records[name])
+        
+    #for scores in records:
+        #if scores in records
+        
+        
+        
+        
+        
+    print(records)
+    
+
+    
+if __name__ == '__main__':
+    students = ['student1', 'student2', 'student3', 'student4', 'student5', 'student6', 'student7', 'student8', 'student9', 'student10',]
+    marks = [45, 78, 12, 14, 48, 43, 47, 98, 35, 80]
+    display_dashboard(students, marks)
