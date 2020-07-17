@@ -19,7 +19,7 @@ def dot_product():
                         
     result = []
     tmp = 0   
-    if (A_row == A_col and B_row == B_col) or (A_col == B_row):
+    if (A_col == B_row):
         for i in range(0, A_row):
             list = []
             tmp = 0
@@ -30,7 +30,8 @@ def dot_product():
                 list.append(tmp)
             result.append(list)
     else:
-        print("NOT POSSIBLE............");
+        x = "NOT POSSIBLE............"
+        result.append(x)
         
     print("Matrix A : {}\nMatrix B : {}\nA.B : {}".format(A, B, result))
     
